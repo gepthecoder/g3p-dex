@@ -22,5 +22,13 @@ async function logOut() {
   console.log("logged out");
 }
 
+
+function openSelectTokenModal(){
+    document.getElementById("token_modal").style.display = "block";
+}
+
+
+document.getElementById("from_token_select").onclick = openSelectTokenModal;
+
 document.getElementById("btn-login").onclick = login;
 document.getElementById("btn-logout").onclick = logOut;

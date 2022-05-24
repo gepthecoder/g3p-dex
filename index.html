@@ -28,7 +28,7 @@
                 <h4>Swap</h4>
                 <div id="form">
                     <div class="swapbox">
-                        <div class="swapbox_select token_select">
+                        <div class="swapbox_select token_select" id="from_token_select">
                            ETH 
                         </div>
                         <div class="swapbox_select">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="swapbox">
-                        <div class="swapbox_select token_select">
+                        <div class="swapbox_select token_select" id="to_token_select">
                             TOKEN SELECT
                         </div>
                         <div class="swapbox_select">
@@ -58,6 +58,23 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="token_modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Select Token</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
