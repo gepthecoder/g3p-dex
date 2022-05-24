@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-.token_list_img {
+.token_list_img, .token_image {
     width: 40px;
 }
 
@@ -39,3 +39,11 @@
     overflow: scroll;
 }
 
+.token_row {
+    padding: 5px 10px;
+}
+
+.token_row:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
