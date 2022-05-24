@@ -75,6 +75,7 @@ function selectToken(address) {
     console.log(currentTrade);
 
     renderInterface()
+    getQuote()
 }
 
 function renderInterface() {
@@ -100,6 +101,21 @@ function closeSelectTokenModal(){
     token_modal.style.display = "none";
 }
 
+async function getQuote() {
+    if (!currentTrade.from || !currentTrade.to || !document.getElementById("from_amount").value) return;
+  
+    let amount = Number(document.getElementById("from_amount").value * 10 ** currentTrade.from.decimals);
+  
+    const quote = await Moralis.Plugins.oneInch.quote({
+      chain: "eth", // The blockchain you want to use (eth/bsc/polygon)
+      fromTokenAddress: currentTrade.from.address, // The token you want to swap
+      toTokenAddress: currentTrade.to.address, // The token you want to receive
+      amount: amount,
+    });
+    console.log(quote);
+    document.getElementById("to_amount").value = quote.toTokenAmount / 10 ** quote.toToken.decimals;
+}
+
 
 init();
 
@@ -109,3 +125,4 @@ document.getElementById("to_token_select").onclick = (() => { openSelectTokenMod
 document.getElementById("modal_close").onclick = closeSelectTokenModal;
 
 document.getElementById("btn-login").onclick = login;
+document.getElementById("from_amount").onblur = getQuote;
