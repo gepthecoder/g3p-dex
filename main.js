@@ -82,6 +82,11 @@ function renderInterface() {
         document.getElementById("from_token_image").src = currentTrade.from.logoURI;
         document.getElementById("from_token_text").innerHTML = currentTrade.from.symbol;
     }
+
+    if (currentTrade.to) {
+        document.getElementById("to_token_image").src = currentTrade.to.logoURI;
+        document.getElementById("to_token_text").innerHTML = currentTrade.to.symbol;
+    }
 }
 
 const token_modal = document.getElementById("token_modal");
@@ -99,6 +104,8 @@ function closeSelectTokenModal(){
 init();
 
 document.getElementById("from_token_select").onclick = (() => { openSelectTokenModal("from")});
+document.getElementById("to_token_select").onclick = (() => { openSelectTokenModal("to")});
+
 document.getElementById("modal_close").onclick = closeSelectTokenModal;
 
 document.getElementById("btn-login").onclick = login;
