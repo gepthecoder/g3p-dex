@@ -6,3 +6,18 @@
     border-radius: 20px;
     box-shadow: 0 0 5px black;
 }
+
+.swapbox_select {
+   width: 50%;
+   float: left;
+}
+
+.swapbox {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: snow;
+    border-radius: 20px;
+    border: 1px solid blanchedalmond;
+}
+
