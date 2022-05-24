@@ -23,12 +23,21 @@ async function logOut() {
 }
 
 
+/* SELECT TOKEN MODAL */
+
+const token_modal = document.getElementById("token_modal");
+
 function openSelectTokenModal(){
-    document.getElementById("token_modal").style.display = "block";
+    token_modal.style.display = "block";
+}
+
+function closeSelectTokenModal(){
+    token_modal.style.display = "none";
 }
 
 
 document.getElementById("from_token_select").onclick = openSelectTokenModal;
+document.getElementById("modal_close").onclick = closeSelectTokenModal;
 
 document.getElementById("btn-login").onclick = login;
 document.getElementById("btn-logout").onclick = logOut;
