@@ -21,3 +21,12 @@
     border: 1px solid blanchedalmond;
 }
 
+.token_select {
+    padding: 5px 0;
+}
+
+.token_select:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
+
