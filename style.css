@@ -34,3 +34,8 @@
     width: 40px;
 }
 
+.modal-body {
+    height: 600px;
+    overflow: scroll;
+}
+
